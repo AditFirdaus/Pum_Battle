@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Bullets/Types/Normal.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Textures/Bullets/Bullet_Small.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Effects/Explosion/Explosion.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1, 1 )
+
+[node name="Normal_Bullet" type="Area2D"]
+script = ExtResource( 1 )
+speed = 5.0
+lifetime = 0.5
+allow_damage = true
+End_Effects = ExtResource( 3 )
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Bullet_Small" type="Sprite" parent="."]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )

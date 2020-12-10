@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Effects/Explosion.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Resources/Animation_Frames/Explosion/Explosion_1.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://Assets/Resources/Audio/Explosion_Huge.wav" type="AudioStream" id=3]
+
+[node name="Explosion" type="AnimatedSprite"]
+frames = ExtResource( 2 )
+frame = 8
+playing = true
+script = ExtResource( 1 )
+Sound = ExtResource( 3 )
